@@ -1,3 +1,5 @@
 .h1__success {
   color: #339900;
+  padding: 1rem;
+  background-color: lightpink;
 }
