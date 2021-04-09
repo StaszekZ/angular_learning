@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'no server was created';
-  serverName = 'bla bla';
+  serverName = 'asd';
   userName = '';
+  serverCreated = false;
+  servers = ['testServerOne', 'testServerTwo', 'testServerThree'];
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -19,6 +21,8 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreateServer() {
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus =
       'Server was created! Name is ' + this.serverName;
   }
@@ -33,11 +37,11 @@ export class ServersComponent implements OnInit {
     this.userName = '';
   }
 
-  toggleBtnDisable() {
-    if (this.userName === '') {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // toggleBtnDisable() {
+  //   if (this.userName === '') {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }   lub w html !!!!!!!!!!!
 }
